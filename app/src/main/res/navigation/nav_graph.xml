@@ -1,6 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login">
 
+    <fragment
+        android:id="@+id/login"
+        android:name="ni.edu.uca.navarmandomeza.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu"
+        android:name="ni.edu.uca.navarmandomeza.Menu"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_to_salarioInss"
+            app:destination="@id/salarioInss" />
+        <action
+            android:id="@+id/action_menu_to_notas"
+            app:destination="@id/notas" />
+        <action
+            android:id="@+id/action_menu_to_beca"
+            app:destination="@id/beca" />
+    </fragment>
+    <fragment
+        android:id="@+id/salarioInss"
+        android:name="ni.edu.uca.navarmandomeza.SalarioInss"
+        android:label="fragment_salario_inss"
+        tools:layout="@layout/fragment_salario_inss" />
+    <fragment
+        android:id="@+id/notas"
+        android:name="ni.edu.uca.navarmandomeza.Notas"
+        android:label="fragment_notas"
+        tools:layout="@layout/fragment_notas" />
+    <fragment
+        android:id="@+id/beca"
+        android:name="ni.edu.uca.navarmandomeza.Beca"
+        android:label="fragment_beca"
+        tools:layout="@layout/fragment_beca" />
 </navigation>
